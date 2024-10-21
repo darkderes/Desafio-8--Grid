@@ -2,11 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: azure; */
 }
-/* .body{
-    background-color: rgb(95, 95, 95);
-} */
 .container {
   display: grid;
   grid-template-areas:
@@ -26,7 +22,8 @@
   color: white;
 }
 .sidebar {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  grid-area: sidebar;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -39,19 +36,25 @@
 
 .sidebar ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .sidebar ul li {
   margin-bottom: 10px;
-  text-align: center;
+  padding-left: 10px; /* Añade padding para alinear los elementos */
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
 }
 
-.sidebar {
-  grid-area: sidebar;
-  background: rgb(170, 170, 163);
+.sidebar ul li strong {
+  display: inline-block; /* Asegura que el strong no afecte el alineamiento */
+  width: 100px; /* Ajusta el ancho según sea necesario */
 }
+
 .product-grid {
   grid-area: main;
+  background-color: #f4f4f4;
   display: grid;
   padding: 20px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -61,20 +64,30 @@
 .product-card {
   background-color: #fff;
   border: 1px solid #ccc;
-  /* padding: 40px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 30%; */
 }
 
 .product-card img {
   max-width: 100%;
-  /* height: 50px; */
+  height: 400px;
 }
 
 .product-card h3 {
   margin: 15px 0 10px;
+}
+
+.product-card .buy-button {
+  background: rgb(19, 67, 129);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .foot {
