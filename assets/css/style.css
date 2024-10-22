@@ -10,8 +10,8 @@
     "sidebar main main "
     "foot foot foot ";
   grid-template-columns: 350px 1fr 1fr;
-  grid-template-rows: 100px 1fr 50px;
-  height: 100vh;
+  grid-template-rows: 100px calc(100vh - 100px - 50px) 50px;
+  /* height: 100vh; */
 }
 .head {
   grid-area: head;
@@ -59,6 +59,7 @@
   padding: 20px;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  overflow-y: scroll;
 }
 .product-card {
   background-color: #fff;
